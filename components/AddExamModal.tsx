@@ -142,7 +142,7 @@ export default function AddExamModal({ onExamAdded }: AddExamModalProps) {
     setFormData({
       ...formData,
       [subject]: {
-        ...formData[subject],
+        ...(formData[subject] as SubjectData),
         [field]: value,
       },
     })
